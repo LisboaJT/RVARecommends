@@ -10,7 +10,6 @@ certifi==2023.11.17
 cffi==1.14.5
 chardet==4.0.0
 charset-normalizer==3.3.2
-cockpit==300.4
 colorama==0.4.3
 cupshelpers==1.0
 dasbus==1.4
