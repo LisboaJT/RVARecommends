@@ -17,6 +17,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 from recommendations.views import home, recommendations_view  # Import the home view you just created
+from rest_framework.authtoken.views import obtain_auth_token
 
 
 urlpatterns = [
@@ -24,7 +25,8 @@ urlpatterns = [
     # Include your app's URLs with a namespace
     path('recommendations/', include(('recommendations.urls', 'recommendations'), namespace='recommendations')),
     path('', home, name='home'),  # Add this line for the root URL
-    path('api/recommendations/', recommendations_view, name='recommendations_api')
+    path('api/recommendations/', recommendations_view, name='recommendations_api'),
+    path('api-token-auth/', obtain_auth_token, name='api_token_auth'),
 ]
 
 
