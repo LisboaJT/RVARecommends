@@ -22,7 +22,7 @@
         font-family: 'Montserrat', sans-serif;
     }
     #recommendation-form {
-        width: 60vw; /* Adjust the width as desired */
+        width: 100%; /* Adjust the width as desired */
         max-width: 800px;
         min-width: 300px;
         margin: 0 auto 10px auto; /* Adds top, right, bottom, and left margins */
@@ -30,7 +30,7 @@
         font-family: 'Montserrat', sans-serif;
     }
     #recommendation-form button {
-        width: 60vw; /* Adjust the width as needed */
+        width: 100%; /* Adjust the width as needed */
         max-width: 800px;
         min-width: 300px;
         margin: 0; /* Center the button */
@@ -42,7 +42,7 @@
         height: auto;
     }
     #recommendations-output {
-        width: 60vw;
+        width: 100%;
         max-width: 800px;
         min-width: 300px;
         /* Margin adjusted for consistency and centering */
@@ -51,6 +51,13 @@
         padding: 20px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         border-radius: 8px;
+    @media (min-width: 768px) {
+        #recommendation-form, #recommendation-form button, #recommendations-output {
+            width: 60vw; /* Adjust width for larger screens */
+        }
+        img {
+            max-width: 100%; /* Allows image to use full width if needed */
+        }
     }
 </style>
 </head>
